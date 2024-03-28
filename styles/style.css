@@ -1,0 +1,406 @@
+@charset "utf-8";
+@import "fonts.css";
+@import "colors.css";
+
+/* fix to include padding and borders in box model dimensions */
+html {
+  font-size: 1.1em;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow-y: scroll;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+small {
+  font-size: 0.65em;
+}
+p {
+  font-size: 1em;
+}
+h1 {
+  font-size: 2.1em;
+}
+h2 {
+  font-size: 1.7em;
+}
+h3 {
+  font-size: 1.4em;
+}
+h4 {
+  font-size: 1.2em;
+}
+h5 {
+  font-size: 1.1em;
+}
+h6 {
+  font-size: 1em;
+}
+
+body {
+  background-color: var(--whiskerpink);
+  margin: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: "Ubuntu", Arial, sans-serif;
+}
+
+.fixed-header {
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+  height: 150px;
+  position: fixed;
+}
+
+.banner {
+  position: relative;
+  height: 125px;
+}
+
+.banner-image {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  height: 100px;
+  top: 10px;
+}
+
+.fixed-header-h1 {
+  position: relative;
+  z-index: 1;
+  color: var(--meowgrey);
+  height: 25px;
+  line-height: 25px;
+  margin: 15px 25px 0;
+  font-size: 2em;
+  font-family: "Ubuntu Mono";
+  min-width: 320px;
+}
+
+.navbar {
+  background-color: var(--whiskerbrown);
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 150px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  height: 50px;
+  float: left;
+  color: var(--meowgrey);
+  text-align: center;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: white;
+  color: var(--meowgrey);
+}
+
+.navbar a.active {
+  background-color: var(--whiskerpink);
+  color: var(--meowgrey);
+}
+
+.navbar a.active:hover {
+  background-color: white;
+  color: var(--meowgrey);
+}
+
+main {
+  max-width: 100%;
+  margin: 200px 5vw 0;
+  width: 89.1vw;
+  min-height: calc(100vh - 200px - 2em);
+  display: inline-block;
+}
+
+section h3 {
+  margin: 0 0 0.5em;
+}
+
+section p {
+  margin: 0;
+  width: 100%;
+}
+
+.section-box {
+  margin: 1em 0;
+  background-color: white;
+  border-radius: 1em;
+  padding: 1em 1.5em;
+  width: 100%;
+  max-width:1024px;
+}
+
+.one-column {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  width: 100%;
+}
+
+#header__game {
+  text-align: center;
+  font-family: "Ubuntu Mono";
+  font-size: xx-large;
+  margin-top: 0;
+}
+
+.player-container {
+  display: flex;
+  padding: 2em;
+  border: 2px solid var(--meowgrey);
+  border-radius: 5px;
+  margin: 0 0.5em;
+}
+
+.player-header {
+  width: 100%;
+  text-align: center;
+}
+
+.dice-container {
+  display:  flex;
+}
+
+.dice-image {
+  width: 50px;
+  margin: 2em;
+}
+
+#container__game-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.game-button {
+  padding: 1em;
+  margin: 1em;
+  width: 125px;
+  background-color: var(--meowpink);
+  appearance: button;
+  backface-visibility: hidden;
+  outline: none;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+  border-width: 0;
+  color: white;
+  font-size: 100%;
+  text-shadow: 1px 1px 1px var(--meowgrey);
+  font-family: "Ubuntu Mono";
+}
+
+.round-results {
+  text-align: center;
+  margin: 1em 0;
+  line-height: 1em;
+  height: 1em;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.score-container {
+  height: 5.5em;
+}
+
+.score-container p {
+  line-height: 1em;
+  margin: 0.5em 0;
+}
+
+.round-result {
+  line-height: 1em;
+  height: 1em;
+  font-size: larger;
+  color: var(--meowpink);
+}
+
+.game-results {
+  font-weight: bold;
+  font-size: x-large;
+  text-align: center;
+  height: 2em;
+  line-height: 2em;
+  margin: 1em 0 0;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+.italic {
+  font-style: oblique;
+}
+
+.hidden {
+  display: none;
+}
+
+.code {
+  background-color: var(--meowgrey);
+  color: var(--whiskerpink);
+  font-family: "Ubuntu Mono";
+  font-size: 0.8em;
+  padding: 0.2em;
+}
+
+.quote footer {
+  height: min-content;
+  font-size: small;
+}
+
+footer {
+  margin: auto;
+  width: 100%;
+  height: 2em;
+  line-height: 1.75em;
+  background-color: var(--whiskerbrown);
+  text-align: center;
+  bottom: 0;
+}
+
+/*
+media queries for tablets
+*/
+@media (min-width: 768px) {
+  .fixed-header {
+    height: 200px;
+  }
+  
+  .banner {
+    top: -10px;
+    height: 150px;
+  }
+  
+  .fixed-header-h1 {
+    height: 50px;
+    line-height: 50px;
+    margin-top: 20px;
+  }
+    
+  .banner-image {
+    top: -60px;
+    width: 500px;
+    height: 150px;
+  }
+  
+  .section-box {
+    margin: 1em auto;
+    padding: 1.5em 3em;
+  }
+  
+  .two-column {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  #container__game-players {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .dice-image {
+    width: 100px;
+  }
+}
+
+/*
+media queries for laptops
+*/
+@media (min-width: 1280px) {
+  .section-box {
+    padding: 2em 3em;
+  }
+
+}
+
+/* print styles */
+@media print {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    display: block;
+    overflow: visible;
+    page-break-after: avoid;
+  }
+
+  a[href^="http"]:after {
+    content: " URL: (" attr(href) ") ";
+  }
+
+  body {
+    margin: 0;
+    color: black;
+    background: white;
+    overflow-y: visible;
+  }
+
+  main {
+    margin-top: 0;
+  }
+
+  div {
+    display: block;
+    overflow: visible;
+    break-inside: avoid;
+  }
+
+  .navbar,
+  .banner,
+  .page-footer {
+    display: none;
+  }
+
+  table thead {
+    background-color: var(--whiskergrey);
+    color: black;
+  }
+
+  .quote {
+    display: table;
+  }
+
+  .quote footer {
+    background-color: white;
+  }
+
+  blockquote:after {
+    content: " Source: (" attr(cite) ") ";
+    font-size: x-small;
+  }
+
+  section ~ section {
+    page-break-before: always;
+  }
+}

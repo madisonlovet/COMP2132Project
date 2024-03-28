@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+author:		Madison Lovett
+date:		  2024-03-27
+-->
+  <head>
+    <title>Madison Lovett | COMP 2132</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+
+  <body>
+    <header class="fixed-header">
+      <div class="banner">
+        <h1 class="fixed-header-h1">Dice Game</h1>
+        <img class="banner-image" src="images/banner.png" alt="Five cartoon kitties playing with confetti">
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a class="active" href="./index.html">Play</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div>
+          <section id="section__game" class="section-box">
+              <h2 id="header__game">Press Start</h2>
+              <div id="container__game-players">
+                <div id="container__player1" class="player-container one-column">
+                  <h3 class="player-header">You</h3>
+                  <div id="container__player1--dice" class="dice-container">
+                    <div id="container__player1--die1">
+                      <img id="img__player1--die1" class="dice-image unrolled" src="./images/dice/dice-1.png" alt="Dice face 1">
+                    </div>
+                    <div id="container__player1--die2">
+                      <img id="img__player1--die2" class="dice-image unrolled" src="./images/dice/dice-1.png" alt="Dice face 1">
+                    </div>
+                  </div>
+                  <div id="container__player1--score" class="score-container">
+                    <div id="container__player1--score-text" class="hidden">
+                      <div class="center">
+                        <p class="bold round-result" id="player1-round-result">{{result}}</p>
+                      </div>
+                      <div>
+                        <p><span class="bold">Round Score:</span> <span id="player1-score-round">{{round}}</span></p>
+                        <p><span class="bold">Total Score:</span> <span id="player1-score-total">{{total}}</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="container__player2" class="player-container one-column">
+                  <h3 class="player-header">Opponent</h3>
+                  <div id="container__player2--dice" class="dice-container">
+                    <div id="container__player2--die1">
+                      <img id="img__player2--die1" class="dice-image unrolled" src="./images/dice/dice-1.png" alt="Dice face 1">
+                    </div>
+                    <div id="container__player2--die2">
+                      <img id="img__player2--die2" class="dice-image unrolled" src="./images/dice/dice-1.png" alt="Dice face 1">
+                    </div>
+                  </div>
+                  <div id="container__player2--score" class="score-container">
+                    <div id="container__player2--score-text" class="hidden">
+                      <div class="center">
+                        <p class="bold round-result" id="player2-round-result">{{result}}</p>
+                      </div>
+                      <div>
+                        <p><span class="bold">Round Score:</span> <span id="player2-score-round">{{round}}</span></p>
+                        <p><span class="bold">Total Score:</span> <span id="player2-score-total">{{total}}</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="container__game-results">
+                <p id="text__game-results" class="game-results"></p>
+              </div>
+              <div id="container__game-buttons">
+                <button id="button__new-game" class="game-button hidden" onclick="newGame()" disabled>New Game</button>
+                <button id="button__roll-dice" class="game-button" onclick="rollDice()">Start</button>
+              </div>
+          </section>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <small class="no-wrap">Copyright &copy; 2024 Madison Lovett | COMP 2132</small>
+    </footer>
+
+    <script src="scripts/dicegame.js"></script>
+    
+  </body>
+</html>
